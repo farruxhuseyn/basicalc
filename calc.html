@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and Html Calculator!</title>
+    <script src="ders.js"></script>
+    <style>
+        #cavab{
+            color:red;
+            font-family: Tahoma;
+            size: 20px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h3>Simple Calculator <hr></h3>
+  <input class="calc" type="text" id="num1"> <br> <br>
+  <input type="text" id="num2"> <br> <br>
+  <button onclick="add()">+</button>
+  <button onclick="sub()">-</button>  <br> <br>
+  <button onclick="mup()">*</button>
+  <button onclick="def()">/</button>
+ 
+  <div><br>
+    <b>Results : </b>
+
+    <div id="cavab"></div>
+  </div>
+<script>
+    function add(){
+        var cavab = document.getElementById("cavab");
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        if(num1 == false || num2 == false){
+            cavab.innerHTML = "Don't leave any empty spaces!";
+        }else
+        (
+            cavab.innerHTML = parseInt(num1) + parseInt(num2)
+        );
+    
+
+    }
+    function sub(){
+        var cavab = document.getElementById("cavab");
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        if(num1 == false || num2 == false){
+            cavab.innerHTML = "Don't leave any empty spaces!";
+        }else
+        (
+            
+            cavab.innerHTML = parseInt(num1) - parseInt(num2)
+        );
+
+    }
+    function mup(){
+        var cavab = document.getElementById("cavab");
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        if(num1 == false || num2 == false){
+            cavab.innerHTML = "Don't leave any empty spaces!";
+        }else
+        (
+            cavab.innerHTML = parseInt(num1) * parseInt(num2)
+        );
+
+
+    }
+    function def(){
+        var cavab = document.getElementById("cavab");
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        if(num1 == false || num2 == false){
+            cavab.innerHTML = "Don't leave any empty spaces!";
+        }else
+        (
+            cavab.innerHTML = parseInt(num1) / parseInt(num2)
+        );
+
+    }
+</script>
+</body>
+</html>
